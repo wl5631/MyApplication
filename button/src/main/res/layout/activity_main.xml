@@ -1,0 +1,46 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/open_nate"
+        android:id="@+id/bnt_nate"
+        android:background="#73050a03"
+        android:textSize="16dp"
+        android:onClick="OnClick"
+        android:textStyle="bold" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/call_911"
+        android:id="@+id/bnt_call911"
+        android:background="#35c214"
+        android:textStyle="bold"
+        android:onClick="OnClick"
+        android:textSize="16dp" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/open_gallery"
+        android:id="@+id/bnt_gallery"
+        android:background="#f93500"
+        android:textSize="16dp"
+        android:onClick="OnClick"
+        android:textStyle="bold" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/exit"
+        android:id="@+id/bnt_exit"
+        android:background="#f7ff0a"
+        android:textSize="16dp"
+        android:onClick="OnClick"
+        android:textStyle="bold" />
+</LinearLayout>

@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Calc</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="number_1">number1</string>
+    <string name="number_2">number2</string>
+    <string name="add">add</string>
+    <string name="sub">sub</string>
+    <string name="mul">mul</string>
+    <string name="div">div</string>
+    <string name="result">result :</string>
+    <string name="rem">rem</string>
+</resources>

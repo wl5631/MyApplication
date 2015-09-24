@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Calc</string>
+    <string name="action_settings">설정</string>
+    <string name="add">더하기</string>
+    <string name="div">나누기</string>
+    <string name="hello_world">안녕!</string>
+    <string name="mul">곱하기</string>
+    <string name="number_1">숫자1</string>
+    <string name="number_2">숫자2</string>
+    <string name="rem">나머지</string>
+    <string name="result">계산결과 :</string>
+    <string name="sub">빼기</string>
+</resources>

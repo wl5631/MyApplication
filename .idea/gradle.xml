@@ -11,6 +11,10 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/button" />
+            <option value="$PROJECT_DIR$/calc" />
+            <option value="$PROJECT_DIR$/image" />
+            <option value="$PROJECT_DIR$/myapplication2" />
           </set>
         </option>
       </GradleProjectSettings>

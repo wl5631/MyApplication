@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Image</string>
+    <string name="action_settings">설정</string>
+    <string name="hello_world">안녕!</string>
+    <string name="v_start">선택을 시작하겠습니까?</string>
+    <string name="v_started">시작함</string>
+    <string name="s_version">좋아하는 안드로이드 버전은?</string>
+    <string name="v_jellybean">젤리빈(4.3)</string>
+    <string name="v_kitkat">키캣(4.4)</string>
+    <string name="v_lollipop">롤리팝(5.0)</string>
+    <string name="v_exit">종료</string>
+    <string name="v_restart">처음으로</string>
+</resources>

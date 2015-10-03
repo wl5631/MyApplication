@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Image</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="v_start">Do you want to start to make a choice?</string>
+    <string name="v_started">Stared</string>
+    <string name="s_version">Which android version you like?</string>
+    <string name="v_jellybean">Jellybean(4.3)</string>
+    <string name="v_kitkat">Kitkat(4.4)</string>
+    <string name="v_lollipop">Lollipop(5.0)</string>
+    <string name="v_exit">Exit</string>
+    <string name="v_restart">Restart</string>
+</resources>

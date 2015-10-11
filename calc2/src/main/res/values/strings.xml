@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Calc2</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="v_input_num1">Input number1</string>
+    <string name="v_input_num2">Input number2</string>
+    <string name="v_add">ADD</string>
+    <string name="v_sub">SUB</string>
+    <string name="v_mul">MUL</string>
+    <string name="v_div">DIV</string>
+    <string name="v_result">Result :</string>
+    <string name="v_title">TableLayout Calculator</string>
+    <string name="v_select">Select a EditText</string>
+</resources>

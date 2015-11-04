@@ -6,4 +6,5 @@
     <string name="v_input_url">URL을 입력하세요.</string>
     <string name="v_move">이동</string>
     <string name="v_previous">이전</string>
+    <string name="v_go">이동</string>
 </resources>

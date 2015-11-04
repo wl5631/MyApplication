@@ -4,6 +4,6 @@
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="v_input_url">Input an URL</string>
-    <string name="v_move">Move</string>
     <string name="v_previous">Previous</string>
+    <string name="v_go">Go</string>
 </resources>

@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+ 
         edit_url = (EditText) findViewById(R.id.editText_url);
         bnt_go = (Button) findViewById(R.id.button_move);
         bnt_previous = (Button) findViewById(R.id.button_previous);

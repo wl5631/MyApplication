@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Calc2</string>
+    <string name="v_input_num1">숫자1 입력</string>
+    <string name="hello_world">안녕!</string>
+    <string name="action_settings">설정</string>
+    <string name="v_input_num2">숫자2 입력</string>
+    <string name="v_add">더하기</string>
+    <string name="v_sub">빼기</string>
+    <string name="v_mul">곱하기</string>
+    <string name="v_div">나누기</string>
+    <string name="v_result">계산결과 :</string>
+    <string name="v_title">태이블 레이아웃 계산기</string>
+    <string name="v_select">먼저 에디트텍스트를 선택하세요</string>
+</resources>

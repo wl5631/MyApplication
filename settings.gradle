@@ -1,1 +1,1 @@
-include ':app', ':myapplication2', ':button', ':calc', ':image'
+include ':app', ':myapplication2', ':button', ':calc', ':image', ':calc2', ':webview'

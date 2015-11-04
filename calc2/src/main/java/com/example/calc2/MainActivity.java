@@ -39,16 +39,16 @@ public class MainActivity extends AppCompatActivity {
         tv_result = (TextView) findViewById(R.id.textView_result);
 
         for(i =0; i<numBtnIDs.length; i++){
-            numButtons[i] = (Button) findViewById(numBtnIDs[i]);
+                numButtons[i] = (Button) findViewById(numBtnIDs[i]);
         }
 
-        for(i=0; i<numBtnIDs.length; i++) {
-            final int index;
-            index = i;
+                    for(i=0; i<numBtnIDs.length; i++) {
+                        final int index;
+                        index = i;
 
-            numButtons[index].setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
+                        numButtons[index].setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
                     if (edit_num1.isFocused() == true) {
                         num1 = edit_num1.getText().toString() + numButtons[index].getText().toString();
                         edit_num1.setText(num1);
@@ -113,6 +113,8 @@ public class MainActivity extends AppCompatActivity {
                 else {
                     result = Integer.parseInt(num1) / Integer.parseInt(num2);
                     tv_result.setText("Result :" + result);
+                    tv_result.setSingleLine();
+
                 }
             }
         });

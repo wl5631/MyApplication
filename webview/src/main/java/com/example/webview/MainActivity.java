@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
                 web.loadUrl(url);
                 edit_url.setText(url);
             }
-        });
+        }); 
 
         bnt_previous.setOnClickListener(new View.OnClickListener() {
             @Override

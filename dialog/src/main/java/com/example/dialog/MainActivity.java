@@ -16,6 +16,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.Random;
+
 public class MainActivity extends AppCompatActivity {
 
     EditText edit_name, edit_email, dlg_edit_name, dlg_edit_email;
@@ -39,12 +41,15 @@ public class MainActivity extends AppCompatActivity {
                 AlertDialog.Builder dlg = new AlertDialog.Builder(MainActivity.this);
                 dlg.setTitle(R.string.v_user_info);
                 dlg.setView(view_dialog);
+
+                dlg_edit_name = (EditText) view_dialog.findViewById(R.id.d_edit_name);
+                dlg_edit_email = (EditText) view_dialog.findViewById(R.id.d_edit_eamil);
+
+                dlg_edit_name.setText(edit_name.getText().toString());
+                dlg_edit_email.setText(edit_email.getText().toString());
                 dlg.setPositiveButton(R.string.v_ok, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        dlg_edit_name = (EditText) view_dialog.findViewById(R.id.d_edit_name);
-                        dlg_edit_email = (EditText) view_dialog.findViewById(R.id.d_edit_eamil);
-
                        edit_name.setText(dlg_edit_name.getText().toString());
                        edit_email.setText(dlg_edit_email.getText().toString());
                     }
@@ -52,12 +57,13 @@ public class MainActivity extends AppCompatActivity {
                 dlg.setNegativeButton(R.string.v_cancel, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                          Toast toast = new Toast(MainActivity.this);
+                        Toast toast = new Toast(MainActivity.this);
                         view_toast = (View) View.inflate(MainActivity.this, R.layout.toast, null);
                         toast_text = (TextView) view_toast.findViewById(R.id.toast_text);
                         toast_text.setText("It has been cancled");
+                        Random random = new Random();
                         toast.setView(view_toast);
-                        toast.setGravity(Gravity.RIGHT, 100, 100 );
+                        toast.setGravity(Gravity.LEFT, random.nextInt(300)+1,random.nextInt(500)+1);
                         toast.show();
                     }
                 });

@@ -40,10 +40,17 @@ public class MainActivity extends AppCompatActivity {
         int cMonth = cal.get(Calendar.MONTH);
         int cDay = cal.get(Calendar.DAY_OF_MONTH);
 
+        fileName =Integer.toString(cYear) + "_" + Integer.toString(cMonth+1) + "_" +Integer.toString(cDay) + ".txt";
+        String str = readDiary(fileName);
+        edit_diary.setText(str);
+        bnt_write.setEnabled(true);
+
+
+
         dp.init(cYear, cMonth, cDay, new DatePicker.OnDateChangedListener() {
             @Override
             public void onDateChanged(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
-                fileName = Integer.toString(year) + "_" + Integer.toString(monthOfYear+1) + "_" +Integer.toString(dayOfMonth) + ".txt";
+                fileName =Integer.toString(year) + "_" + Integer.toString(monthOfYear+1) + "_" +Integer.toString(dayOfMonth) + ".txt";
                 String str = readDiary(fileName);
                 edit_diary.setText(str);
                 bnt_write.setEnabled(true);
@@ -53,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
 
         bnt_write.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void  onClick(View v){
 
                 try {
                     FileOutputStream outFs = openFileOutput(fileName, Context.MODE_WORLD_WRITEABLE);
@@ -83,27 +90,5 @@ public class MainActivity extends AppCompatActivity {
             bnt_write.setText(R.string.v_save);
         }
         return diaryStr;
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
     }
 }

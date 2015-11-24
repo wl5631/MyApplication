@@ -18,7 +18,7 @@ public class SecondActivity extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
-        
+
         tv_result = (TextView) findViewById(R.id.textView_result);
         bnt_intent = (Button) findViewById(R.id.button_second);
 

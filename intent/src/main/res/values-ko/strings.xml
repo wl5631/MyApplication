@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Intent</string>
+    <string name="action_settings">설정</string>
+    <string name="hello_world">안녕!</string>
+    <string name="title_activity_second">SecondActivity</string>
+    <string name="v_Sub">뺴기</string>
+    <string name="v_add">더하기</string>
+    <string name="v_calculate">계산하기</string>
+    <string name="v_div">나누기</string>
+    <string name="v_mul">곱하기</string>
+    <string name="v_send_result">결과 보내기</string>
+</resources>

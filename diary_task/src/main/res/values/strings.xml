@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Diary_task</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="v_save">Save</string>
+    <string name="v_reload">Reload</string>
+    <string name="v_delete">Delete Diary</string>
+    <string name="v_size">Text Size</string>
+    <string name="v_Large">Large</string>
+    <string name="v_normal">Normal</string>
+    <string name="v_small">Small</string>
+</resources>

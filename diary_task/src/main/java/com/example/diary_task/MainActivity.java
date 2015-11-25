@@ -135,35 +135,34 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         super.onCreateOptionsMenu(menu);
-        MenuInflater menuInflater = getMenuInflater();
-        menuInflater.inflate(R.menu.menu, menu);
+        MenuInflater menuInflater = getMenuInflater(); //메뉴 인플레이터 생성
+        menuInflater.inflate(R.menu.menu, menu);  // menu.xml 등록
         return true;
    }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()){
-            case R.id.menu_reload:
-
-                String str = readDiary(fileName);
+        switch (item.getItemId()){ //메뉴 선택 switch문
+            case R.id.menu_reload: // 다시 불러오기 메뉴
+                String str = readDiary(fileName); // TextView에 설정된 날짜 일기를 다시 불러온다.
                 edit_diary.setText(str);
                 return true;
-            case R.id.menu_delete:
+            case R.id.menu_delete: // 일기 삭제 메뉴
                 File Diary = new File(Environment.getExternalStorageDirectory().getAbsolutePath()+ "/mydiary", fileName);
-                if(Diary.exists()){
-                    AlertDialog.Builder dialog = new AlertDialog.Builder(MainActivity.this);
+                if(Diary.exists()){ //해당 날짜에 일기 파일이 존재하면
+                    AlertDialog.Builder dialog = new AlertDialog.Builder(MainActivity.this); // 다이얼로그 생성
                     dialog.setTitle("Delete Diary");
                     dialog.setMessage("Do you want to delete this diary on " + Integer.toString(cYear)+"/"+ Integer.toString(cMonth+1)+ "/"+ Integer.toString(cDay));
-                    dialog.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                    dialog.setPositiveButton("OK", new DialogInterface.OnClickListener() { //ok 버튼
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
                             File Diary = new File(Environment.getExternalStorageDirectory().getAbsolutePath() + "/mydiary", fileName);
-                            Diary.delete();
-                            edit_diary.setText(" ");
+                            Diary.delete(); // 일기 파일 삭제
+                            edit_diary.setText(" "); // EditText 내용 공백으로 설정
                             Toast.makeText(getApplicationContext(), fileName + " has been deleted", Toast.LENGTH_SHORT).show();
                         }
                     });
-                    dialog.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                    dialog.setNegativeButton("Cancel", new DialogInterface.OnClickListener() { // cancle 버튼
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
                             Toast.makeText(getApplicationContext()," canceled", Toast.LENGTH_SHORT).show();
@@ -173,14 +172,14 @@ public class MainActivity extends AppCompatActivity {
                     }
                 return true;
 
-            case R.id.menu_large:
-                edit_diary.setTextSize(30);
+            case R.id.menu_large: // 글씨 크기 변경 메뉴
+                edit_diary.setTextSize(30); //글씨 크기 30으로 변경
                 return true;
             case R.id.menu_normal:
-                edit_diary.setTextSize(20);
+                edit_diary.setTextSize(20); // 글씨 크기 20으로 변경(Default)
                 return true;
             case R.id.menu_small:
-                edit_diary.setTextSize(10);
+                edit_diary.setTextSize(10); // 글씨 크기 10으로 변경
                 return true;
         }
         return false;

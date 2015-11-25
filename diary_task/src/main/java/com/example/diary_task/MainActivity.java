@@ -153,7 +153,7 @@ public class MainActivity extends AppCompatActivity {
                 if(Diary.exists()){
                     AlertDialog.Builder dialog = new AlertDialog.Builder(MainActivity.this);
                     dialog.setTitle("Delete Diary");
-                    dialog.setMessage("Do you want to delete this diary");
+                    dialog.setMessage("Do you want to delete this diary on " + Integer.toString(cYear)+"/"+ Integer.toString(cMonth+1)+ "/"+ Integer.toString(cDay));
                     dialog.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {

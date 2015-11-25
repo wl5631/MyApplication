@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Diary_task</string>
+    <string name="action_settings">설정</string>
+    <string name="hello_world">안녕!</string>
+    <string name="v_reload">다시 읽기</string>
+    <string name="v_save">저장</string>
+    <string name="v_delete">일기 삭제</string>
+    <string name="v_size">글씨 크기</string>
+    <string name="v_Large">크게</string>
+    <string name="v_normal">보통</string>
+    <string name="v_small">작게</string>
+</resources>

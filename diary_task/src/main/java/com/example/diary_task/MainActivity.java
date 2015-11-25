@@ -50,13 +50,13 @@ public class MainActivity extends AppCompatActivity {
         cMonth = cal.get(Calendar.MONTH);
         cDay = cal.get(Calendar.DAY_OF_MONTH);
 
-        checkDir(sdPath);
+        checkDir(sdPath); //mydiary 폴더 존재 확인.
 
         tv_date.setText(Integer.toString(cYear) + "/" + Integer.toString(cMonth + 1) + "/" + Integer.toString(cDay));
 
         fileName =Integer.toString(cYear) + "_" + Integer.toString(cMonth+1) + "_" +Integer.toString(cDay) + ".txt";
-        String str = readDiary(fileName);
-        edit_diary.setText(str);
+        String str = readDiary(fileName); //ReadDiary
+        edit_diary.setText(str); //일기를 EditText에 보여준다.
 
         tv_date.setOnClickListener(new View.OnClickListener() {
 
@@ -73,11 +73,11 @@ public class MainActivity extends AppCompatActivity {
 
                     File Diary = new File(sdPath + "/mydiary", fileName);
                     FileOutputStream outFs = new FileOutputStream(Diary);
-                    if(!Diary.exists()){
-                        Diary.createNewFile();
+                    if(!Diary.exists()){ //해당 날짜 일기가 존재하지 않으면
+                        Diary.createNewFile(); // 파일 생성
                     }
                     String str = edit_diary.getText().toString();
-                    outFs.write(str.getBytes());
+                    outFs.write(str.getBytes()); //파일 쓰기
                     outFs.close();
                     Toast.makeText(getApplicationContext(), fileName + " has been saved", Toast.LENGTH_SHORT).show();
                 } catch (IOException e) {
@@ -86,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    public void checkDir(String path) {
+    public void checkDir(String path) { // mydiary 폴더가 존재하지 않을 경우 폴더 생성
         final File mydiary = new File(path + "/mydiary");
        if (!mydiary.exists())
                mydiary.mkdir();
@@ -96,7 +96,7 @@ public class MainActivity extends AppCompatActivity {
         String diaryStr = null;
         FileInputStream inFs;
         try{
-            inFs = new FileInputStream("/sdcard/mydiary/"+fileName);
+            inFs = new FileInputStream("/sdcard/mydiary/"+fileName); // 파일 입력스트림을 생성하고 경로를 설정한다.
             byte[] txt = new byte[inFs.available()];
             inFs.read(txt);
             inFs.close();
@@ -105,13 +105,13 @@ public class MainActivity extends AppCompatActivity {
         }catch (IOException e){
             Toast.makeText(getApplicationContext(), "No such File " + fileName, Toast.LENGTH_SHORT).show();
         }
-        return diaryStr;
+        return diaryStr; //일기 내용을 리턴한다.
 
     }
     public void showDatePicker(){
 
-        DatePickerDialog dialog = new DatePickerDialog(MainActivity.this, dateListener, cYear, cMonth, cDay);
-        dialog.setButton(DatePickerDialog.BUTTON_POSITIVE, "OK", dialog);
+        DatePickerDialog dialog = new DatePickerDialog(MainActivity.this, dateListener, cYear, cMonth, cDay); //DatePaickerDialog 생성
+        dialog.setButton(DatePickerDialog.BUTTON_POSITIVE, "OK", dialog); //확인 버튼 설정
         dialog.show();
 
         dateListener = new DatePickerDialog.OnDateSetListener() {
@@ -123,11 +123,11 @@ public class MainActivity extends AppCompatActivity {
                 cMonth = monthOfYear;
                 cDay = dayOfMonth;
 
-                tv_date.setText(Integer.toString(year) + "/" + Integer.toString(monthOfYear + 1) + "/" + Integer.toString(dayOfMonth));
+                tv_date.setText(Integer.toString(year) + "/" + Integer.toString(monthOfYear + 1) + "/" + Integer.toString(dayOfMonth)); // 선택한 날짜로 TextView 설정
 
                 fileName =Integer.toString(cYear) + "_" + Integer.toString(cMonth+1) + "_" +Integer.toString(cDay) + ".txt";
-                String str = readDiary(fileName);
-                edit_diary.setText(str);
+                String str = readDiary(fileName); //해당 날짜 일기 불러오기
+                    edit_diary.setText(str); // 일기 내용 보여주기
             }
         };
     }
@@ -153,7 +153,7 @@ public class MainActivity extends AppCompatActivity {
                 if(Diary.exists()){
                     AlertDialog.Builder dialog = new AlertDialog.Builder(MainActivity.this);
                     dialog.setTitle("Delete Diary");
-                    dialog.setMessage("Do you want to delete this diary?");
+                    dialog.setMessage("Do you want to delete this diary");
                     dialog.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id = "@+id/menu_reload"
+        android:title="@string/v_reload">
+    </item>
+
+    <item
+        android:id = "@+id/menu_delete"
+        android:title="@string/v_delete">
+    </item>
+
+    <item
+        android:id = "@+id/menu_textsize"
+        android:title="@string/v_size">
+        <menu>
+            <item
+                android:id = "@+id/menu_large"
+                android:title="@string/v_Large"/>
+            <item
+                android:id = "@+id/menu_normal"
+                android:title="@string/v_normal"/>
+            <item
+                android:id = "@+id/menu_small"
+                android:title="@string/v_small"/>
+        </menu>
+    </item>
+</menu>

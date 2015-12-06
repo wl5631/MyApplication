@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Sqlite</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="v_name">Name :</string>
+    <string name="v_number">Number :</string>
+    <string name="v_reset">Reset</string>
+    <string name="v_Input">Input</string>
+    <string name="v_inquiry">Inquiry</string>
+    <string name="v_gName">Group Name</string>
+    <string name="v_gNumber">Number</string>
+    <string name="v_edit">Update</string>
+    <string name="v_delete">Delete</string>
+</resources>
